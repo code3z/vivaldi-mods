@@ -1,0 +1,5 @@
+#browser > .toolbar-statusbar {position:fixed;bottom:0;right:0;height: 25px; width: fit-content;border-radius: var(--radius) 0 0 0;border:none;box-shadow: 0 0 0 1px var(--colorBorder), 0 2px 6px rgba(0, 0, 0, 0.25);transition: bottom .13s 2s !important;}
+#browser > .toolbar-statusbar:not(:focus-within):not(:hover) {bottom:-23px; transition: bottom .25s ease-out 5s !important;}
+/* .toolbar-statusbar::before {content:''; position:fixed; z-index:-1; bottom:0; height: 12px; width: 330px;} */ /* trigger zone */
+#browser > .toolbar-statusbar .button-toolbar {align-self: auto;}
+#browser:not(.fullscreen) .StatusInfo {position:fixed; left:2px; bottom:2px; height: 20px; padding: 2.5px 3px 0; background: var(--colorBgDark); border-radius: var(--radiusHalf); pointer-events: none;}

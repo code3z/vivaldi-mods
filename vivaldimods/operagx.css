@@ -1,0 +1,161 @@
+/*
+ * Opera GX Theme
+ * Written by Tam710562
+ */
+
+/*-----Highlight to Accent-----*/
+input[type=checkbox]:before,
+input[type=checkbox]:after,
+input[type=radio]:before,
+input[type=radio]:focus:before,
+input[type=checkbox]:focus:before,
+input[type=radio]:focus:after,
+input[type=checkbox]:focus:after,
+input[type=radio]:active:focus:before,
+input[type=checkbox]:active:focus:before,
+input[type=radio]:active:focus:after,
+input[type=checkbox]:active:focus:after {
+  background-color: var(--colorAccentBg);
+}
+
+input[type=button][type=submit],
+input[type=submit][type=submit],
+input[type=color][type=submit],
+.webpage-button[type=submit],
+input[type=button].primary,
+input[type=submit].primary,
+input[type=color].primary,
+.webpage-button.primary {
+  color: var(--colorAccentBg);
+  border: 1px solid var(--colorAccentBg);
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  border-color: var(--colorAccentBgFaded);
+  box-shadow: unset;
+}
+
+select:focus {
+  border-color: var(--colorAccentBg);
+}
+
+select[multiple]:focus option:checked,
+select[size]:focus option:checked {
+  color: var(--colorAccentFg);
+  background: linear-gradient(var(--colorAccentBg), var(--colorAccentBg));
+}
+
+.multiinput .multiinput-item:focus:not([tabindex='-1']) {
+  color: var(--colorAccentFg);
+  fill: var(--colorAccentFg);
+  background-color: var(--colorAccentBg);
+}
+
+.multiinput .multiinput-select .multiinput-option[data-selected],
+.multiinput .multiinput-select .multiinput-option:hover {
+  color: var(--colorHighlightFg);
+  background-color: var(--colorAccentBg);
+}
+
+.vivaldi-tree .tree-row.dragoverAbove {
+  box-shadow: 0 1px var(--colorAccentBgDarker) inset, 0 -1px var(--colorAccentBgDarker);
+}
+
+.vivaldi-tree .tree-row.dragoverBelow {
+  box-shadow: 0 -1px var(--colorAccentBgDarker) inset, 0 1px var(--colorAccentBgDarker);
+}
+.vivaldi-tree .tree-row.dragover {
+  color: var(--colorAccentFg);
+  background-color: var(--colorAccentBgDarker);
+}
+
+.hasfocus .vivaldi-tree:focus-within .tree-row[data-selected] {
+  background-color: var(--colorAccentBg);
+  color: var(--colorAccentFg);
+}
+
+.selectbox.selectbox-selected .selectbox-image {
+  border-color: var(--colorAccentBg);
+}
+
+.selectbox.selectbox-selected .selectbox-image:before {
+  border-bottom-color: var(--colorAccentBg);
+  border-right-color: var(--colorAccentBg);
+}
+
+.colorpicker .colorpicker-plot .colorpicker-plot-reticle:focus {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px var(--colorAccentBg), 0 0 0 4px var(--colorAccentBgAlpha);
+}
+
+.button-badge {
+  background-color: var(--colorAccentFg);
+  color: var(--colorAccentBgDark);
+}
+
+input[type=button][type=submit]:hover:not([disabled]),
+input[type=submit][type=submit]:hover:not([disabled]),
+input[type=color][type=submit]:hover:not([disabled]),
+.webpage-button[type=submit]:hover:not([disabled]),
+input[type=button].primary:hover:not([disabled]),
+input[type=submit].primary:hover:not([disabled]),
+input[type=color].primary:hover:not([disabled]),
+.webpage-button.primary:hover:not([disabled]) {
+  color: var(--colorAccentFg);
+  background: var(--colorAccentBg);
+  border-color: var(--colorAccentBg);
+}
+
+button:focus:not([tabindex='-1']),
+input:focus:not([tabindex='-1']),
+select:focus:not([tabindex='-1']),
+textarea:focus:not([tabindex='-1']),
+input[type=text]:focus:not([tabindex='-1']),
+input[type=search]:focus:not([tabindex='-1']),
+input[type=password]:focus:not([tabindex='-1']),
+input[type=email]:focus:not([tabindex='-1']),
+input[type=url]:focus:not([tabindex='-1']),
+input[type=number]:focus:not([tabindex='-1']),
+input[type=radio]:focus:not([tabindex='-1']),
+input[type=date]:focus:not([tabindex='-1']),
+input[type=time]:focus:not([tabindex='-1']),
+input[type=checkbox]:focus:not([tabindex='-1']),
+input[type=button]:focus:not([tabindex='-1']),
+input[type=submit]:focus:not([tabindex='-1']),
+#notes-panel .notes-editor .editor:focus {
+  border-color: var(--colorAccentBg);
+  box-shadow: unset;
+}
+
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+  fill: var(--colorAccentBgFaded);
+  color: var(--colorAccentBgFaded);
+}
+
+.tilingtoggle .button-popup button.button-on {
+  fill: var(--colorAccentBgFaded);
+  color: var(--colorAccentBgFaded);
+}
+
+.active.tiled.webpageview {
+  box-shadow: 0 0 0 1px var(--colorAccentBg), 0 0 0 2px var(--colorAccentBgAlpha);
+}
+
+.OmniLinkItem--Highlighted {
+  color: var(--colorAccentFg);
+  fill: var(--colorAccentFg);
+  background-color: var(--colorAccentBg);
+}
+
+.hasfocus .quick-command-container .quick-commands .quick-command[data-selected] {
+  color: var(--colorAccentFg);
+  background-color: var(--colorAccentBg);
+}
+
+.quick-command-container .quick-commands .quick-command .quick-command-favicon[src^="chrome-extension://mpognobbkildjkofajifpdfhcoklimli/resources/"] {
+  filter: invert(1) brightness(1) saturate(0) opacity(.5) drop-shadow(0px 0px 0px var(--colorAccentBgDarker)) drop-shadow(0px 0px 0px var(--colorAccentBgDarker)) drop-shadow(0px 0px 0px var(--colorAccentBgDarker));
+}
+
+.quick-command-container .quick-commands .quick-command[data-selected] .quick-command-favicon[src^="chrome-extension://mpognobbkildjkofajifpdfhcoklimli/resources/"] {
+  filter: invert(1) brightness(1) saturate(0) opacity(.5) drop-shadow(0px 0px 0px var(--colorAccentFg)) drop-shadow(0px 0px 0px var(--colorAccentFg)) drop-shadow(0px 0px 0px var(--colorAccentFg));
+}
+/*-----Highlight to Accent-----*/

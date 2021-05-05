@@ -1,0 +1,153 @@
+/* declares tab bar width */
+:root {
+  --condensed-tab-container-width: 90px;
+  --condensed-tab-container-width-hovered: 120px;
+  --condensed-tab-container-width-small-screen: 70px;
+  --hidden-tab-container-width: 120px;
+}
+/* Hightlight pinned tabs */
+.tab.pinned {
+  border-left: solid #0A7EF4 2px;
+}
+/* Fixes left-side panel */
+#panels-container.left {
+  left: 90px;
+  z-index: 9;
+}
+/* Declares taab sub/child width */
+/* #tabs-subcontainer {
+  flex-basis: 169px !important;
+}*/
+#tabs-subcontainer {
+  flex-basis: var(--condensed-tab-container-width) !important;
+}
+#tabs-tabbar-container:hover #tabs-subcontainer, #tabs-tabbar-container.show-stack #tabs-subcontainer {
+  flex-basis: var(--condensed-tab-container-width-hovered) !important;
+}
+/* Option to reverse tabs */
+#tabs-tabbar-container.has-substack.tabsreverse {
+  flex-direction: row-reverse;
+}
+
+/* Fixes Overlap of tab bar and address bar*/
+#tabs-tabbar-container.left, #tabs-tabbar-container.right {
+	margin-top: 24px;
+}
+/*  Transparent tabs fix */
+#tabs-container, #tabs-subcontainer, #tabs-tabbar-container {
+  background-color: transparent !important;
+}
+
+#tabs-tabbar-container.tabsreverse #tabs-container, #tabs-tabbar-container:not(.tabsreverse) #tabs-subcontainer {
+  backdrop-filter: blur(10px);
+}
+#tabs-tabbar-container:not(.tabsreverse) #tabs-container, #tabs-tabbar-container.tabsreverse #tabs-subcontainer {
+  -webkit-app-region: drag;
+}
+
+
+/* ----------------------------------------------------------------
+	Vivaldi Hide Tab Subcontainer
+	CSS | JS
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:       Hides the second tab bar when not needed, and other small tweaks
+	Filename:          hide_vertical_tabs.css
+	Platform:          Linux, but can be adapted
+	Version:           v1.1
+	Date:              March 2021
+	Author:            @code3 at vivaldi.net, based off code from @dude99
+	Topic:
+   ----------------------------------------------------------------- */
+
+#tabs-tabbar-container > div {/* background-color: var(--colorBg); */ box-shadow: rgb(0 0 0 / 25%) 0px 0px 6px;}
+#tabs-tabbar-container.left, #tabs-tabbar-container.right {position: fixed; top:25px; bottom:20px; z-index:9; clip-path:inset(0 -50px 0 -50px); transition: .15s ease-out .1s !important;}
+#tabs-tabbar-container.left {left:0;}
+#tabs-tabbar-container.right {right:0;}
+
+
+#tabs-tabbar-container.right:not(:focus-within):not(:hover) {transform: translateX(calc(100% - 32px)); transition: .15s ease-out .5s !important;}
+
+#tabs-tabbar-container:is(.left, .right):not(:focus-within):not(:hover):not(.show-stack) > div.overflow .tab-strip {animation: ofh 0s .5s forwards !important;}
+@keyframes ofh {to {overflow-y: hidden;}}
+/*
+#browser:not(.fullscreen).tabs-left #main {margin-left:30px;}
+#browser:not(.fullscreen).tabs-right #main {margin-right:32px;}
+*/
+
+/* Edit below: */
+
+/* Option 1: shrunk into parent column */
+/* #tabs-tabbar-container:is(.left, .right):not(:focus-within):not(:hover) {flex-direction: row;}
+/* Option 2: shrunk into child column */
+/* #tabs-tabbar-container:is(.left, .right):not(:focus-within):not(:hover) {flex-direction: row-reverse;} */
+
+/*
+#browser:not(.fullscreen).tabs-left #main {
+	margin-left: 0px;
+	border-left: var(--condensed-tab-container-width);
+}
+*/
+
+
+#tabs-tabbar-container.left:not(:focus-within):not(:hover):not(.show-stack) {
+  /* adjust this: */
+	clip-path:inset(0% calc(100% - var(--condensed-tab-container-width)) 0% 0%);
+	transition: .15s ease-out .5s !important;}
+
+#browser:not(.fullscreen) #webview-container, #syrup-meter, #syrup-sign {
+	padding-left: /* Also adjust this */var(--condensed-tab-container-width);
+}
+
+/* Keep sync, trash, and newtab in view at all times. */
+.sync-and-trash-container {
+	margin-left: 5px !important;
+}
+
+.button-toolbar.newtab{
+	left: 5px !important;
+}
+
+
+#tabs-container.left, #tabs-container.right {
+  max-width: var(--condensed-tab-container-width);
+}
+#tabs-tabbar-container:hover #tabs-container.left, #tabs-tabbar-container:hover #tabs-container.right, #tabs-tabbar-container.show-stack #tabs-container.left, #tabs-tabbar-container.show-stack #tabs-container.right {
+  max-width: var(--condensed-tab-container-width-hovered);
+}
+
+/* Move adblocker to the left to avoid overlap*/
+.ContentBlocker.button-popup-centered:before {
+  left: 13%;
+  margin-left: -6px;
+}
+.ContentBlocker.button-popup {
+	left: 100px;
+}
+
+/* Dim thumbnails of hibernated tabs */
+.isdiscarded .thumbnail-image {
+  opacity: 0.4;
+}
+
+#tabs-container {
+    transition: 0.2s;
+}
+
+/* Control Pointer Events */
+#tabs-tabbar-container {
+  pointer-events: none;
+}
+
+#tabs-container, #tabs-subcontainer {
+  pointer-events: all;
+}
+
+#tabs-tabbar-container.has-substack.tabsreverse:not(:hover) {
+    width: calc(var(--condensed-tab-container-width) + var(--hidden-tab-container-width)) !important;
+}
+
+/* selector applies to hidden container */
+#tabs-tabbar-container.has-substack.tabsreverse #tabs-container, #tabs-tabbar-container:not(.tabsreverse) #tabs-subcontainer {
+  max-width: var(--hidden-tab-container-width) !important;
+  flex-basis: var(--hidden-tab-container-width) !important;
+}

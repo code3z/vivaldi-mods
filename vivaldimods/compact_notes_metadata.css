@@ -1,0 +1,9 @@
+/* compact noteseditor metadata */
+#notes-panel .NotesEditor-Metadata {display:flex; flex-flow: row nowrap;}
+#notes-panel .NotesEditor-Metadata > .UrlField {flex: 1 0; width:0; margin-right:3px;}
+#notes-panel .NotesEditor-Metadata > .UrlField > input {background-color: var(--colorBgIntense);}
+#notes-panel .NotesEditor-Metadata > .NotesEditor-MetaIcon--Url:not(:hover) + .UrlField.UrlField--HasEditText:not(:hover):not(:focus-within) input {text-indent: -37px;}
+#notes-panel .NotesEditor-Metadata > .NotesEditor-Created > .NotesEditor-MetaIcon {display:none;}
+#notes-panel .NotesEditor-Metadata > .NotesEditor-MetaIcon--Url:hover + .UrlField.UrlField--HasEditText + .NotesEditor-Created,
+#notes-panel .NotesEditor-Metadata > .UrlField.UrlField--HasEditText:is(:hover, :focus-within) + .NotesEditor-Created {font-size:0;}
+#notes-panel .NotesEditor-Metadata > .NotesEditor-Created {transition: .15s !important;}

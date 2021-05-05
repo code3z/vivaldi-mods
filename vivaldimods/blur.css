@@ -1,0 +1,223 @@
+#modal-bg > div,
+.quick-command-container .quick-commands,
+.manager-editor,
+.sdwrapper,
+.manager .manager-content {
+    /* display: none; */
+    background: none;
+}
+
+.panel-group,
+.OmniDropdown,
+#modal-bg > div,
+.extensionIconPopupMenu .toolbar.toolbar-mainbar,
+.notes-cardwrapper {
+    border: none;
+    background: rgba(42, 42, 42, 0.8);
+    backdrop-filter: blur(27px) brightness(0.7);
+}
+
+/* .toolbar-extensions .sortselector,
+.toolbar-extensions .addbookmark-cardwrapper,
+.toolbar-extensions .download-editor {
+    border: none;
+    background: none;
+}
+.toolbar-extensions .button-popup .button-popup-wrapper {
+    position: absolute;
+    background: none;
+    bottom: 38px;
+    width: 34px;
+    right: 1px;
+    top: auto !important;
+    margin: 0 !important;
+    left: auto !important;
+    right: 0 !important;
+}
+.toolbar-extensions .button-toolbar.extensionPopupIcons {
+    bottom: 58px;
+    position: fixed;
+    right: 1px;
+}
+.toolbar-extensions .button-popup-arrow {
+    bottom: 58px;
+    position: fixed;
+    top: auto !important;
+    margin: 0 !important;
+    left: auto !important;
+    right: 0 !important;
+    top: 272px !important;
+    width: 34px;
+}
+.toolbar-extensions
+    s.color-behind-tabs-off
+    .toolbar-mainbar
+    > .button-toolbar
+    > button.button-pressed {
+    background: none;
+}
+.toolbar-extensions .extensionPopupIcons.button-toolbar > button svg {
+    filter: invert(1);
+    transform: rotate(180deg);
+}
+.toolbar-extensions .button-popup {
+    margin-left: 0;
+    max-height: auto;
+    width: 34px;
+    box-shadow: none;
+}
+.toolbar-extensions .button-popup-arrow--below:before,
+.toolbar-extensions .button-popup-arrow--below:after,
+.toolbar-extensions .focus-popup-area {
+    display: none;
+} */
+#browser .window-buttongroup {
+    margin-left: -5px;
+}
+#browser.linux.alt #tabs-container.top {
+    padding-left: 32px;
+}
+/*
+.tabs-top .tab.active:not(.marked):not(.tab-mini):before,
+.tabs-bottom .tab.active:not(.marked):not(.tab-mini):before {
+    width: 11px;
+    height: 11px;
+    left: -10px;
+    -webkit-mask-image: radial-gradient(
+        circle at 0 0,
+        rgba(0, 0, 0, 0) 70%,
+        #000 73%
+    );
+}
+.tabs-top .tab.active:not(.marked):not(.tab-mini):after,
+.tabs-bottom .tab.active:not(.marked):not(.tab-mini):after {
+    width: 11px;
+    height: 11px;
+    right: -10px;
+    -webkit-mask-image: radial-gradient(
+        circle at 100% 0,
+        rgba(0, 0, 0, 0) 70%,
+        #000 73%
+    );
+} */
+
+.tabs-top .tab.active:not(.marked):not(.tab-mini):before,
+.tabs-bottom .tab.active:not(.marked):not(.tab-mini):before,
+.tabs-top .tab.active:not(.marked):not(.tab-mini):after,
+.tabs-bottom .tab.active:not(.marked):not(.tab-mini):after {
+    display: none;
+}
+.tabs-top .tab-position .tab {
+    border-radius: 0;
+}
+
+@-webkit-keyframes fromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes fromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.OmniDropdown {
+    animation: fromTop 0.2s ease 0s 1;
+}
+
+.vivaldi-picture-in-picture-container {
+    margin-top: -24px !important;
+}
+::-webkit-scrollbar {
+    width: 9px !important;
+    padding: 2px !important;
+    border: none !important;
+    background: none !important;
+}
+::-webkit-scrollbar-track {
+    border: none !important;
+    background: none !important;
+}
+::-webkit-scrollbar-button {
+    display: none !important;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--colorBgAlphaHeavier);
+    border-radius: var(--radius);
+}
+
+.startpage .startpage-navigation {
+    background: rgba(42, 42, 42, 0.8);
+    /* backdrop-filter: blur(27px) brightness(0.7); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.startpage .startpage-content {
+    padding: 50px 0 0;
+}
+
+.startpage .startpage-drawer-wrapper {
+    animation: fromBottom 0.2s ease 0s 1;
+}
+.UrlBar .SearchField,
+.UrlBar-AddressField {
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+.UrlBar .UrlBar-SearchField {
+    border-radius: 0 var(--radius) var(--radius) 0;
+
+    margin-left: -4px;
+}
+
+/*
+.startpage {
+    overflow-x: auto;
+}
+.startpage .startpage-content .sdwrapper {
+    overflow: visible;
+    height: auto;
+}
+.startpage .startpage-drawer-wrapper {
+    background: rgba(42, 42, 42, 0.8);
+    backdrop-filter: blur(27px) brightness(0.7);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    animation: fromBottom 0.2s ease 0s 1;
+} */
+/*
+.startpage .startpage-drawer-wrapper .startpage-drawer {
+    background: none;
+} */
+/* .startpage .startpage-drawer-wrapper .drawer-adddial {
+    background: rgba(42, 42, 42, 0.2);
+    backdrop-filter: blur(27px) brightness(0.7);
+} */
+
+.manager-treeview,
+.startpage .history .manager-content {
+    background: rgba(42, 42, 42, 0.7);
+    backdrop-filter: blur(27px) brightness(0.9);
+}
+
+.dialog-javascript .dialog-content p {
+    user-select: all;
+}

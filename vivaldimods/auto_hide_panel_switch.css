@@ -1,0 +1,39 @@
+/* Panel switch */
+#panels {
+    overflow: visible;
+}
+
+:not(.resizing)#panels-container.overlay .panel-group {
+    transition: width .1s linear !important;
+}
+
+#panels-container.overlay {
+    width: 0 !important;
+}
+
+#panels-container.right.overlay > .SlideBar--FullHeight.alternate, #panels-container.right.icons:not(.overlay) {
+    margin-left: -35px;
+}
+
+#panels-container.left.overlay > .SlideBar--FullHeight.alternate, #panels-container.left.icons:not(.overlay) {
+    margin-right: -35px;
+}
+
+#panels-container.overlay #switch, #panels-container:not(.overlay).icons #switch {
+    background-color: var(--colorBgAlphaBlur);
+}
+
+#panels-container #switch {
+    height: 100%;
+    flex-basis: 35px;
+    visibility: visible !important;
+    z-index: 3;
+}
+
+#panels-container.minimized.icons:not(:hover) #switch, #panels-container.switcher.minimized:not(:hover) #switch {
+    height: 50px;
+    flex-basis: 4px;
+    opacity: 0;
+    margin: 0 2.5px;
+    transition: .1s .9s, background-color 0s 0s, opacity 0s 1s !important;
+}
