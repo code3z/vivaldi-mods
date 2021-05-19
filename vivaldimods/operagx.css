@@ -70,7 +70,7 @@ select[size]:focus option:checked {
 }
 
 .hasfocus .vivaldi-tree:focus-within .tree-row[data-selected] {
-  background-color: var(--colorAccentBg);
+  /* remove background-color: var(--colorAccentBg); */
   color: var(--colorAccentFg);
 }
 

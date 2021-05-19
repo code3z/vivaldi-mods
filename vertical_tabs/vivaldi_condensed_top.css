@@ -15,9 +15,6 @@
    ----------------------------------------------------------------- */
 
 @media screen and (max-width: /* Adjust this number */ 1000px) {
-	div#tabs-tabbar-container {
-		top: 40px !important;
-}
 :root {
 	--condensed-tab-container-width: var(--condensed-tab-container-width-small-screen) !important;
 }

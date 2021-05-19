@@ -164,3 +164,13 @@ div#panels-container.icons.minimized:not(:hover) {
     /* box-shadow: none !important; */
     opacity: 0;
 }
+
+/* Better badge */
+.SiteInfoButton-SecurityBadge {
+    fill: var(--colorAccentBg) !important;
+    filter: contrast(0.5) brightness(1.5);
+}
+.SiteInfoButton-SecurityBadge:hover, .SiteInfoButton-SecurityBadge:active, .SiteInfoButton-SecurityBadge:focus  {
+    fill: white !important;
+    filter: none;
+}
