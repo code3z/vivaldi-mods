@@ -1,0 +1,17 @@
+div#vivaldi-tooltip > * {
+    animation: tab-tooltip 2s;
+}
+
+@keyframes tab-tooltip {
+    0% {
+        pointer-events: none;
+        opacity: 0;
+    }
+    50% {
+        pointer-events: none;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

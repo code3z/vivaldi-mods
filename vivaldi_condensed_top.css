@@ -1,0 +1,66 @@
+/* ----------------------------------------------------------------
+	Vivaldi Condensed Topbar
+	CSS Only
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:       Description [Project]
+	Filename:          vivaldi_condensed_top.css
+	Platform:          Linux, but can be adapted
+	Version:           v1.3
+	Date:              March 2021
+	Author:            @code3 at vivaldi.net
+	Topic:             https://forum.vivaldi.net/topic/58650/first-mod-condenses-top-bar-when-using-vertical-tabs
+	This is free and unencumbered software released into the public domain.
+	https://unlicense.org/UNLICENSE
+	Some parts need adjusting depending on your setup or preferences.
+   ----------------------------------------------------------------- */
+
+@media screen and (max-width: /* Adjust this number */ 1000px) {
+:root {
+	--condensed-tab-container-width: var(--condensed-tab-container-width-small-screen) !important;
+}
+}
+@media screen and (min-width: /* Adjust this number */ 1000px) {
+
+
+#browser.linux .window-buttongroup {
+	top: 15px;
+}
+#titlebar {
+	min-height: 8px;
+	position: inherit;
+	transition: 0.5s;
+}
+
+
+button.window-minimize svg {
+    padding-bottom: 4px;
+}
+
+#browser:not(.tabs-top) .vivaldi {
+	visibility: hidden;
+}
+#pagetitle {
+	visibility: hidden;
+}
+
+.toolbar.toolbar-mainbar.toolbar-mailbar {
+	padding-right: 80px;
+}
+
+#header {
+	min-height: 10px;
+	max-height: 15px;
+}
+/* Uncomment below to enable hiding the maximize button */
+
+.window-maximize {
+	visibility: hidden;
+}
+.window-minimize {
+	position: absolute;
+}
+.toolbar-extensions {
+	padding-right: 60px;
+}
+
+}
